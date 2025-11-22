@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthsary Games</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen" class="screen">
+  <h1>💖 Happy 1st My Iris 💖</h1>
+  <p>There are 2 games here… each one has a message for you.  
+  I love you, good luck! 💗</p>
+  <button class="btn" onclick="goToGame1()">Start Game 1</button>
+</div>
+
+<!-- GAME 1 SCREEN -->
+<div id="game1Screen" class="screen hidden">
+  <h2>Game 1: Puzzle 💞</h2>
+  <p class="instruction">Drag the pieces and put them in the correct order! A|B|C|D hehe</p>
+
+  <div id="puzzleBoard" class="puzzleBoard"></div>
+
+  <div id="game1Msg" class="message-box"></div>
+
+  <button id="nextToGame2" class="btn hidden" onclick="goToGame2()">Next Game ➜</button>
+</div>
+
+<!-- GAME 2 SCREEN -->
+<div id="game2Screen" class="screen hidden">
+  <h2>Game 2: Maze 💗</h2>
+  <p class="instruction">Use the arrow buttons below to move the heart to the goal!</p>
+
+  <div id="maze" class="maze"></div>
+
+  <div class="controls">
+    <button class="arrow" onclick="move('up')">⬆️</button>
+    <div>
+      <button class="arrow" onclick="move('left')">⬅️</button>
+      <button class="arrow" onclick="move('right')">➡️</button>
+    </div>
+    <button class="arrow" onclick="move('down')">⬇️</button>
+  </div>
+
+  <div id="finalMessage" class="message-box"></div>
+</div>
+
+<audio id="song1" src="music1.mp3"></audio>
+<audio id="song2" src="music2.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

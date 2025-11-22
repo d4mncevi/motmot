@@ -1,0 +1,124 @@
+/* GENERAL UI --------------------------------------------------------*/
+body {
+background: linear-gradient(to bottom, #ffd1e8, #ffe6f2);
+font-family: 'Arial', sans-serif;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.screen {
+text-align: center;
+width: 90%;
+max-width: 450px;
+background: #fff0f7;
+padding: 25px;
+border-radius: 25px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hidden { display: none; }
+
+h1, h2 {
+color: #ff62a5;
+}
+
+.btn {
+background: #ff62a5;
+border: none;
+padding: 12px 25px;
+color: white;
+border-radius: 12px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+transition: .2s;
+}
+
+.btn:hover {
+transform: scale(1.1);
+}
+
+/* GAME 1 ------------------------------------------------------------*/
+.puzzleBoard {
+display: grid;
+grid-template-columns: repeat(2, 120px);
+gap: 10px;
+margin: 20px auto;
+}
+
+.puzzlePiece {
+background: #ffb6d9;
+border-radius: 15px;
+font-size: 26px;
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 120px;
+cursor: grab;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Scrollable message boxes */
+.message-box {
+background: #ffe6f4;
+padding: 15px;
+border-radius: 15px;
+margin-top: 20px;
+display: none;
+font-size: 17px;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+max-height: 250px; /* scrollable height */
+overflow-y: auto;
+text-align: left; /* makes reading easier */
+white-space: pre-wrap; /* preserves line breaks */
+}
+
+/* GAME 2 ------------------------------------------------------------*/
+.maze {
+display: grid;
+grid-template-columns: repeat(5, 60px);
+gap: 5px;
+margin: 20px auto;
+}
+
+.cell {
+width: 60px;
+height: 60px;
+background: #ffc6dd;
+border-radius: 10px;
+}
+
+.player {
+background: #ff4d9a;
+border-radius: 50%;
+}
+
+.goal {
+background: #ffd700;
+border-radius: 10px;
+}
+
+/* Arrow buttons (mobile) */
+.controls {
+margin-top: 15px;
+}
+
+.arrow {
+background: #ff85c7;
+border: none;
+padding: 12px 20px;
+font-size: 22px;
+border-radius: 12px;
+margin: 5px;
+cursor: pointer;
+transition: .2s;
+}
+
+.arrow:hover {
+transform: scale(1.1);
+}
