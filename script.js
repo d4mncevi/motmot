@@ -1,4 +1,3 @@
-/* NAVIGATION ------------------------------------------------------*/
 function goToGame1() {
   document.getElementById("startScreen").classList.add("hidden");
   document.getElementById("game1Screen").classList.remove("hidden");
@@ -6,7 +5,6 @@ function goToGame1() {
 }
 
 function goToGame2() {
-  // Stop song1 if still playing
   const song1 = document.getElementById("song1");
   song1.pause();
   song1.currentTime = 0;
@@ -16,7 +14,6 @@ function goToGame2() {
   startMaze();
 }
 
-/* TYPEWRITER EFFECT ----------------------------------------------*/
 function typeWrite(text, element, speed = 30, callback = null) {
   element.innerHTML = "";
   element.style.display = "block";
@@ -32,7 +29,6 @@ function typeWrite(text, element, speed = 30, callback = null) {
   }, speed);
 }
 
-/* GAME 1 — PUZZLE --------------------------------------------------*/
 const puzzleBoard = document.getElementById("puzzleBoard");
 const game1Msg = document.getElementById("game1Msg");
 let draggedPiece = null;
@@ -49,7 +45,6 @@ function startPuzzle() {
     puzzleBoard.appendChild(div);
   });
 
-  // Show instruction at start
   document.querySelector("#game1Screen .instruction").style.display = "block";
   puzzleBoard.style.display = "grid"; // ensure puzzle is visible
   game1Msg.style.display = "none";
@@ -77,21 +72,18 @@ function checkPuzzle() {
   const now = [...puzzleBoard.children].map(x => x.textContent).join("");
 
   if (now === "ABCD") {
-    // Hide puzzle and instruction
     puzzleBoard.style.display = "none";
     document.querySelector("#game1Screen .instruction").style.display = "none";
 
-    // Play first song
     const song1 = document.getElementById("song1");
     song1.play();
 
-    // First message
     typeWrite(
       `Close your eyes, baby. Imagine our moments together, imagine us while listening to this song. Nahanap na kita. Mahal na mahal kita, ivie.`,
       game1Msg,
       30,
       () => {
-        // After a delay, show final message
+
         setTimeout(() => {
           typeWrite(
             `CLOSEE YOUR EYES!!                                                     
@@ -115,7 +107,6 @@ I can’t wait to make more memories with you, sana hanggang dulo na 'to. I’m 
   }
 }
 
-/* GAME 2 — MAZE ---------------------------------------------------*/
 const maze = document.getElementById("maze");
 const finalMsg = document.getElementById("finalMessage");
 const mazeControls = document.querySelector(".controls");
@@ -136,7 +127,6 @@ function startMaze() {
     maze.appendChild(cell);
   }
 
-  // Show instructions and controls
   document.querySelector("#game2Screen .instruction").style.display = "block";
   maze.style.display = "grid";
   mazeControls.style.display = "flex";
@@ -169,7 +159,6 @@ function finishMaze() {
   const song2 = document.getElementById("song2");
   song2.play();
 
-  // Hide maze and controls
   maze.style.display = "none";
   mazeControls.style.display = "none";
   document.querySelector("#game2Screen .instruction").style.display = "none";
@@ -190,4 +179,5 @@ typeWrite(fullMessage, finalMsg, 25);
 
         
 }
+
 
