@@ -1,4 +1,3 @@
-/* GENERAL UI --------------------------------------------------------*/
 body {
 background: linear-gradient(to bottom, #ffd1e8, #ffe6f2);
 font-family: 'Arial', sans-serif;
@@ -41,7 +40,6 @@ transition: .2s;
 transform: scale(1.1);
 }
 
-/* GAME 1 ------------------------------------------------------------*/
 .puzzleBoard {
 display: grid;
 grid-template-columns: repeat(2, 120px);
@@ -62,7 +60,6 @@ cursor: grab;
 box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* Scrollable message boxes */
 .message-box {
 background: #ffe6f4;
 padding: 15px;
@@ -78,7 +75,6 @@ text-align: left; /* makes reading easier */
 white-space: pre-wrap; /* preserves line breaks */
 }
 
-/* GAME 2 ------------------------------------------------------------*/
 .maze {
 display: grid;
 grid-template-columns: repeat(5, 60px);
@@ -103,7 +99,6 @@ background: #ffd700;
 border-radius: 10px;
 }
 
-/* Arrow buttons (mobile) */
 .controls {
 margin-top: 15px;
 }
@@ -122,3 +117,4 @@ transition: .2s;
 .arrow:hover {
 transform: scale(1.1);
 }
+
