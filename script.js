@@ -94,7 +94,8 @@ function checkPuzzle() {
         // After a delay, show final message
         setTimeout(() => {
           typeWrite(
-            `FINISH THE SONG BEFORE YOU READ THIS!!!                                                                                                             
+            `CLOSEE YOUR EYES!!                                                     
+            FINISH THE SONG BEFORE YOU READ THIS!!!                                                                                                             
 Hi love, I was listening to this song and it really made me think about us. “Tahan na, andito ka na”—that line hit me hard kasi it feels like I’ve finally found my home in you.
 
 Every part of the song reminds me of how lucky I am to have you. “Kay ganda ng langit at ng 'yong mata sa gitna ng ilaw ng ating siyudad”—no matter what’s going on around us, when I see you, everything just feels right. I love how we can laugh, talk, or just be silent together, and it still feels perfect.
@@ -176,16 +177,17 @@ function finishMaze() {
  const fullMessage = `Hi, baobei! <3
 I just want to tell you again how much I truly appreciate you. Every day, I feel so lucky and grateful to have you in my life — for your laughter, your kindness, your patience, and just for being the amazing person that you are. Salamat sa pagtitiwala mo sa akin, and for taking risks with me, even when things feel uncertain.
 
-Even though we’re in an LDR, every moment we spend together feels so real. Watching movies with you — kahit sa video call lang — makes me feel like you’re right beside me. Those moments make the distance feel smaller, and they make me fall more in love with you every single time.
+Even though we’re in an LDR, every moment we spend together feels so real. Watching movies with you — kahit sa gmeet lang — makes me feel like you’re right beside me. Those moments make the distance feel smaller, and they make me fall more in love with you every single time.
 
 I’m so thankful for everything we share — our jokes, late-night calls, and all our small and big moments. Thank you for understanding me, for supporting me, and for loving me in your own sweet ways.
 
 I love you more than words can ever express. You’re my best friend, my partner, my safe space, and my favorite person in the whole world. I promise to always cherish you, support you, and make you feel special every day.
 
-Thank you for being my everything. I love you endlessly, ngayon at magpakailanman 💖
-You mean so much to me. I appreciate you every single day. I love you endlessly. 💞`;
+Thank you for being my everything. I love you so much, ngayon at magpakailanman 💖
+You mean so much to me. I appreciate you every single day. I love you, baby!`;
 
 typeWrite(fullMessage, finalMsg, 25);
 
         
 }
+
